@@ -1,0 +1,42 @@
+pragma solidity ^0.8.0;
+
+contract VariableExamples {
+ 
+
+    uint public age = 52;
+    int public temperature = -2;
+    uint8 public smallNum = 255;
+
+    string public name = "Gudha";
+
+    bool public isActive = true;
+
+    address public owner;
+
+    function calculate() public pure returns (uint) {
+        uint temp = 10;
+        uint result = temp * 2;
+        return result;
+    }
+
+    function averagevalue() public pure returns (uint) {
+        uint a=7;
+        uint b=9;
+        uint c=5;
+        uint prod =a*b*c;
+        uint res= prod/3;
+        return res;
+    }
+
+    function myFun() public view returns (uint) {
+        uint myCurrentTime = block.number;
+        return myCurrentTime;
+    }
+
+    uint public constant MAX_SUPPLY = 1000000;
+    address public immutable DEPLOYER;
+
+    constructor() {
+        DEPLOYER = msg.sender;
+    }
+}
